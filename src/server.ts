@@ -1,7 +1,7 @@
 import app from "./app";
 import toxicityService from "./services/toxicityService";
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 toxicityService
     .initialize()
