@@ -33,7 +33,7 @@ class ToxicityService {
         const result = await this.classifier(text);
         const toxicityResult = result[0] as ToxicityResult;
         const isToxic =
-            toxicityResult.score > TOXICITY_THRESHOLD ||
+            toxicityResult.score > TOXICITY_THRESHOLD &&
             toxicityResult.label === "toxic";
         const probability = toxicityResult.score;
 
